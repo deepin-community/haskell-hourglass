@@ -1,0 +1,78 @@
+Source: haskell-hourglass
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-old-locale-dev,
+ libghc-tasty-dev,
+ libghc-tasty-hunit-dev,
+ libghc-tasty-quickcheck-dev,
+Build-Depends-Indep:
+ ghc-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/vincenthz/hs-hourglass
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-hourglass
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-hourglass]
+X-Description: simple performant time-related library
+ Simple time library focusing on simple but powerful and performant API
+ .
+ The backbone of the library is the Timeable and Time type classes.
+ .
+ Each Timeable instances can be converted to type that has a Time
+ instances, and thus are different representations of current time.
+
+Package: libghc-hourglass-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hourglass-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hourglass-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
